@@ -1,0 +1,40 @@
+<div class="aquaBorder">
+<h3>Show Component</h3>
+<div *ngIf = 'errors'>
+  <p>{{errors}}</p>
+</div>
+<div *ngIf='showFriend'>
+  <div class="row">
+    <div class="col-md-2">
+        <p>First name:</p>
+    </div>
+    <div class="col-md-10">
+      <p>{{showFriend.first_name}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <p>Last name:</p>
+    </div>
+    <div class="col-md-10">
+      <p>{{showFriend.last_name}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <p>Birthday:</p>
+    </div>
+    <div class="col-md-10">
+      <p>{{showFriend.birthday | date: 'longDate'}}</p>
+    </div>
+  </div>
+   <div class="row">
+    <div class="col-md-2">
+      <p>Friend since:</p>
+    </div>
+    <div class="col-md-10">
+      <p>{{showFriend.createdAt | date: 'longDate'}}</p>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,5 @@
+.blueBorder {
+    border: 5px solid blue;
+    padding: 15px;
+    border-radius: 10px;
+}

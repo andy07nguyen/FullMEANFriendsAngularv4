@@ -1,0 +1,24 @@
+<div class="orangeBorder">
+  <h3>Edit Component</h3>
+  <div *ngIf='errors'>
+    <p>{{errors}}</p>
+  </div>
+  <div *ngIf='editfriend'>
+   <form (submit)='updateFriend()'>
+    <div class="form-group">
+      <label for="first_name">First name:</label>
+      <input type="text" name="first_name" [(ngModel)]='editfriend.first_name' class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="last_name">Last name:</label>
+      <input type="text" name="last_name"  [(ngModel)]='editfriend.last_name' class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="birthday">Birthday</label>
+      <input type="date" name="birthday"  [ngModel]="editfriend.birthday | date: 'yyyy-MM-dd'" (ngModelChange) = 'editfriend.birthday = $event' class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Edit friend!</button>
+  </form>
+</div>
+
+</div>
